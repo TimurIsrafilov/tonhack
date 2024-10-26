@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.d50b67d6.css",
-    "main.js": "./static/js/main.368f7ec6.js",
-    "static/js/453.80efc53e.chunk.js": "./static/js/453.80efc53e.chunk.js",
-    "index.html": "./index.html",
-    "main.d50b67d6.css.map": "./static/css/main.d50b67d6.css.map",
-    "main.368f7ec6.js.map": "./static/js/main.368f7ec6.js.map",
-    "453.80efc53e.chunk.js.map": "./static/js/453.80efc53e.chunk.js.map"
+    "main.css": "/tonhack/static/css/main.d051a266.css",
+    "main.js": "/tonhack/static/js/main.e6c9739a.js",
+    "static/js/453.80efc53e.chunk.js": "/tonhack/static/js/453.80efc53e.chunk.js",
+    "index.html": "/tonhack/index.html",
+    "main.d051a266.css.map": "/tonhack/static/css/main.d051a266.css.map",
+    "main.e6c9739a.js.map": "/tonhack/static/js/main.e6c9739a.js.map",
+    "453.80efc53e.chunk.js.map": "/tonhack/static/js/453.80efc53e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d50b67d6.css",
-    "static/js/main.368f7ec6.js"
+    "static/css/main.d051a266.css",
+    "static/js/main.e6c9739a.js"
   ]
 }

@@ -7,7 +7,7 @@ import List from "../../components/list/list";
 
 import { MAIN, PROJECTS, TOKENS } from "../../utils/constants";
 //@ts-ignore
-function Main({ userData }): React.JSX.Element {
+function Main({ userData, viewportHeight }): React.JSX.Element {
   // const userData = {
   //   name: "John",
   //   surname: "Silver",
@@ -32,18 +32,13 @@ function Main({ userData }): React.JSX.Element {
       <p
         className={styles.main__user}
       >{`first_name: ${userData.first_name}`}</p>
-      <p
-        className={styles.main__user}
-      >{`last_name: ${userData.last_name}`}</p>
-      <p
-        className={styles.main__user}
-      >{`username: ${userData.username}`}</p>
+      <p className={styles.main__user}>{`last_name: ${userData.last_name}`}</p>
+      <p className={styles.main__user}>{`username: ${userData.username}`}</p>
       <p
         className={styles.main__user}
       >{`language_code: ${userData.language_code}`}</p>
-            <p
-        className={styles.main__user}
-      >{`id: ${userData.id}`}</p>
+      <p className={styles.main__user}>{`id: ${userData.id}`}</p>
+      <p className={styles.main__user}>{`viewportHeight: ${viewportHeight}`}</p>
       <List info={usrerInfo} />
       <Link to={TOKENS}>
         <Button title={"MY <STARTUP> TOKENS"} />

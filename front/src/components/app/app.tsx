@@ -9,16 +9,18 @@ import Projects from "../../pages/projects/projects";
 import { MAIN, PROJECTS, TOKENS } from "../../utils/constants";
 
 function App(): React.JSX.Element {
-  //@ts-ignore  
-  let tg = window.Telegram.WebApp
-  const userData = tg.initDataUnsafe.user
-  console.log("initDataUnsafe:", userData)
-
+  //@ts-ignore
+  let tg = window.Telegram.WebApp;
+  const userData = tg.initDataUnsafe.user;
+  const viewportHeight = tg.viewportHeight;
+  //@ts-ignore
+  console.log("tg.viewportHeight:", tg.viewportHeight);
+  console.log("initDataUnsafe:", userData);
 
   return (
     <div className={styles.app}>
       <h1>TRACKER</h1>
-      <Main userData={userData}/>
+      <Main userData={userData} viewportHeight={viewportHeight} />
 
       {/* <Routes>
         <Route path={MAIN} element={<Main />} />

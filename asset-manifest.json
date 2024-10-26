@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tonhack/static/css/main.379a5c85.css",
-    "main.js": "/tonhack/static/js/main.bf42d605.js",
+    "main.js": "/tonhack/static/js/main.64131629.js",
     "static/js/453.80efc53e.chunk.js": "/tonhack/static/js/453.80efc53e.chunk.js",
     "index.html": "/tonhack/index.html",
     "main.379a5c85.css.map": "/tonhack/static/css/main.379a5c85.css.map",
-    "main.bf42d605.js.map": "/tonhack/static/js/main.bf42d605.js.map",
+    "main.64131629.js.map": "/tonhack/static/js/main.64131629.js.map",
     "453.80efc53e.chunk.js.map": "/tonhack/static/js/453.80efc53e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.379a5c85.css",
-    "static/js/main.bf42d605.js"
+    "static/js/main.64131629.js"
   ]
 }

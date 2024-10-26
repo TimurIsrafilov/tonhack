@@ -1,0 +1,19 @@
+.button {
+  height: 60px;
+  width: 274px;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(0.25turn, var(--violet1), var(--violet2), var(--violet3));
+  margin: 14px 0;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.button__title {
+  font-size: 20px;
+  text-align: center;
+  color: var(--white);
+  margin: 0;
+  padding: 0;
+}

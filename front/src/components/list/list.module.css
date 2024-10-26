@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  border-radius: 12px;
+  background: var(--pink);
+  margin: 14px 0;
+  padding: 10px 14px;
+}
+
+.list__item_container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--violet1-opacity);
+  height: 24px;
+}
+
+.list__item_container:last-of-type {
+  border-bottom: none;
+}
+
+.list__item_title {
+  color: var(--violet2);
+  margin: 0;
+  padding: 0;
+}
+
+.list__item_content {
+  margin: 0;
+  padding: 0;
+}

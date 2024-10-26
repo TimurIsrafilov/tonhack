@@ -1,0 +1,13 @@
+.main {
+  text-align: center;
+}
+
+.main__title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.main__user {
+  font-size: 20px;
+  text-align: center;
+}

@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './components/app/app';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./components/app/app";
+import reportWebVitals from "./reportWebVitals";
 
 import { HashRouter } from "react-router-dom";
+
+import { TonConnectUIProvider } from "@tonconnect/ui-react";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <HashRouter>
-      <App />
+      <TonConnectUIProvider manifestUrl="https://disk.yandex.ru/d/NeH7q1xYtzg6dA">
+        <App />
+      </TonConnectUIProvider>
     </HashRouter>
   </React.StrictMode>
 );

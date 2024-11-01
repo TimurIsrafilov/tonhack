@@ -8,6 +8,13 @@ import Projects from "../../pages/projects/projects";
 
 import { MAIN, PROJECTS, TOKENS } from "../../utils/constants";
 
+import {
+  TonConnectButton,
+  TonConnectUIProvider,
+  useTonAddress,
+  useTonWallet,
+} from "@tonconnect/ui-react";
+
 function App(): React.JSX.Element {
   //@ts-ignore
   let tg = window.Telegram.WebApp;
@@ -17,17 +24,39 @@ function App(): React.JSX.Element {
   console.log("tg.viewportHeight:", tg.viewportHeight);
   console.log("initDataUnsafe:", userData);
 
-  return (
-    <div className={styles.app}>
-      <h1>TRACKER</h1>
-      <Main userData={userData} viewportHeight={viewportHeight} />
+  const userFriendlyAddress = useTonAddress();
+  const rawAddress = useTonAddress(false);
+  const wallet = useTonWallet();
 
-      {/* <Routes>
+  return (
+    <TonConnectUIProvider manifestUrl="https://timurisrafilov.github.io/tonhack/tonconnect-manifest.json">
+      {/* <TonConnectUIProvider manifestUrl={`https://${YOUR_APP_URL}/tonconnect-manifest.json`}> */}
+      <div className={styles.app}>
+        <h1>TRACKER</h1>
+
+        <TonConnectButton />
+        {userFriendlyAddress && rawAddress && (
+          <div>
+            <p>User-friendly address: {userFriendlyAddress}</p>
+            <p>Raw address: {rawAddress}</p>
+          </div>
+        )}
+        {wallet && (
+          <div>
+            {/* <p>Connected wallet: {wallet.name}</p> */}
+            <p>Device: {wallet.device.appName}</p>
+          </div>
+        )}
+
+        <Main userData={userData} viewportHeight={viewportHeight} />
+
+        {/* <Routes>
         <Route path={MAIN} element={<Main />} />
         <Route path={TOKENS} element={<Tokens />} />
         <Route path={PROJECTS} element={<Projects />} />
       </Routes> */}
-    </div>
+      </div>
+    </TonConnectUIProvider>
   );
 }
 

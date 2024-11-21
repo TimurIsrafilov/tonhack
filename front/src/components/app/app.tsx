@@ -9,10 +9,13 @@ import Projects from "../../pages/projects/projects";
 import { MAIN, PROJECTS, TOKENS } from "../../utils/constants";
 
 import {
+  SendTransactionRequest,
   TonConnectButton,
   useTonAddress,
   useTonWallet,
 } from "@tonconnect/ui-react";
+
+import { useTonConnectUI } from "@tonconnect/ui-react";
 
 function App(): React.JSX.Element {
   //@ts-ignore
@@ -40,6 +43,18 @@ function App(): React.JSX.Element {
       ? { color: "var(--white)" }
       : { color: "var(--black)" };
 
+  const transaction: SendTransactionRequest = {
+    validUntil: Date.now() + 5 * 60 * 1000, // 5 minutes
+    messages: [
+      {
+        address: "UQCmHU39chg1_j_r9CAjG9wg0-G3o2W9OztdVS-EiXWHFMz-", // message destination in user-friendly format
+        amount: "1", // Toncoin in nanotons
+      },
+    ],
+  };
+
+  const [tonConnectUI, setOptions] = useTonConnectUI();
+
   return (
     <div
       className={`${styles.app} ${
@@ -49,6 +64,13 @@ function App(): React.JSX.Element {
       <h1>TRACKER</h1>
 
       <TonConnectButton />
+
+      <div>
+        <button onClick={() => tonConnectUI.sendTransaction(transaction)}>
+          Send transaction
+        </button>
+      </div>
+
       {userFriendlyAddress && rawAddress && (
         <div>
           <p>User-friendly address: {userFriendlyAddress}</p>

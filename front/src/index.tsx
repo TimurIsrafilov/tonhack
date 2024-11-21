@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <HashRouter>
-      <TonConnectUIProvider manifestUrl="https://raw.githubusercontent.com/TimurIsrafilov/tonhack/refs/heads/master/front/tonconnect-manifest.json">
+      <TonConnectUIProvider manifestUrl="https://raw.githubusercontent.com/TimurIsrafilov/tonhack/refs/heads/master/front/tonconnect-manifest.txt">
         <App />
       </TonConnectUIProvider>
     </HashRouter>

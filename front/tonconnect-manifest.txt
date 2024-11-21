@@ -1,0 +1,7 @@
+{
+  "name": "tonhackwallet",
+  "url": "https://timurisrafilov.github.io/tonhack/",
+  "iconUrl": "https://ton-connect.github.io/demo-dapp/apple-touch-icon.png",
+  "termsOfUseUrl": "https://timurisrafilov.github.io/tonhack/terms",
+  "privacyPolicyUrl": "https://timurisrafilov.github.io/tonhack/privacy"
+}

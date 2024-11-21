@@ -6,3 +6,11 @@
   margin: 0;
   padding: 12px;
 }
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: var(--color-tg-bg-dark);
+}
